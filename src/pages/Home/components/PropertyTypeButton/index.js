@@ -1,10 +1,11 @@
-import {PropertyTypeButtonWrapper} from "./Styles";
-import {IoAmericanFootballOutline } from "react-icons/io5";
+import {IconWrapper, PropertyTypeButtonWrapper} from "./Styles";
 
-export const PropertyTypeButton = ({ icon, label }) => (
+export const PropertyTypeButton = ({ icon:Icon, label }) => (
     <>
         <PropertyTypeButtonWrapper>
-            < IoAmericanFootballOutline />
+            <IconWrapper>
+                <Icon />
+            </IconWrapper>
             <p>{label}</p>
         </PropertyTypeButtonWrapper>
     </>

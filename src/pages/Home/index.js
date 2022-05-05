@@ -1,21 +1,21 @@
-import { Component, Fragment } from "react";
 import { PropertyTypeButton } from "./components/PropertyTypeButton";
 import { PropertyTypesContainer} from "./styles"
 import { Profile} from "./components/Profile";
 import { WelcomeMesaage } from "./components/WelcomMessage";
-import styledComponents from "styled-components";
+import { IoBusiness, IoHome, IoMap, IoPrism, IoLocation } from "react-icons/io5";
+import { PropertyCard } from "./components/PropertyCard";
+import { Page } from "../../components/Page";
 
 const PropertyTypes = [
-    {icon: 'icono-apartamento', label: 'Apartamentos'},
-    {icon: 'icono-casa', label: 'Casas'},
-    {icon: 'icono-lote', label: 'Lotes'},
-    {icon: 'icono-finca', label: 'Fincas'},
-    {icon: 'icono-local', label: 'Locales'}
+    {icon: IoBusiness, label: 'Apartamentos'},
+    {icon: IoHome, label: 'Casas'},
+    {icon: IoMap, label: 'Lotes'},
+    {icon: IoPrism, label: 'Fincas'},
+    {icon: IoLocation, label: 'Locales'}
 ]
 
 export const Home = () => (
-    <>
-        <h1>home - morada</h1>
+    <Page>
         <Profile name={"Alejandro Mejia Tabares"} picture={require("./components/Profile/imagenes/imagen.jpg")}/>
         <WelcomeMesaage />
         <PropertyTypesContainer>
@@ -25,6 +25,11 @@ export const Home = () => (
 
             }
         </PropertyTypesContainer>
-    </>
+
+        <PropertyCard/>
+        <PropertyCard/>
+        <PropertyCard/>
+        <PropertyCard/>
+    </Page>
 
 )
