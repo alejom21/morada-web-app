@@ -26,5 +26,7 @@ export const LinkStyled = styled(Link)`
     ${BaseButtonStyle}
     text-decoration: none;
     display: block;
-
+    padding: 4px 0;
+    color: #fff;
+    background-color: #828282;
 `

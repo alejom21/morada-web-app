@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { MENU_HEIGHT } from '../../constants/styles';
 
 export const MenuWrapper = styled.div`
     border-top: 2px solid #ccc;
     width: 100%;
-    height: 80px;
+    height: ${MENU_HEIGHT}px;
     position: fixed;
     left: 0;
     bottom: 0;

@@ -11,6 +11,7 @@ import { Account } from './pages/Account';
 import { Favorites } from './pages/Favorites';
 import { Login } from './pages/Login';
 import { Singup } from './pages/Singup';
+import { Register } from './pages/Register';
 
 export const Navigation = () =>(
     <BrowserRouter>
@@ -21,6 +22,7 @@ export const Navigation = () =>(
             <Route path='/Favorites' element={<Favorites/>} /> 
             <Route path='/Login' element={<Login/>} /> 
             <Route path='/Singup' element={<Singup/>} /> 
+            <Route path='/Register' element={<Register/>} /> 
            
             <Route path='*' element={<NotFound picture={require("./pages/NotFound/imagen/error-4040-768x469.webp")}/>} /> 
         </Routes>
