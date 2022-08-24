@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: "lato";
     }
+    
 `;
 
 export const PageTitle = styled.h1`
@@ -18,6 +19,7 @@ export const PageTitle = styled.h1`
     color: #222;
     font-weight: 300;
     text-align: center;
+    text-transform: capitalize;
 
 `;
 
@@ -36,8 +38,8 @@ export const FormControl = styled.div`
     border-radius: 6px;
     background-color: #f2f2f2;
     padding: 5px 10px;
-    text-transform: capitalize;
     display: flex;
+    text-transform: initial;
 
 `;
 
@@ -74,5 +76,9 @@ export const FormControlInput = styled.div`
         background-color: transparent;
         border: none;
         outline: none;
+    }
+    span{
+        color: red;
+        font-size: 0.85em;
     }
 `;

@@ -1,8 +1,10 @@
-import { IoHome, IoPerson, IoStar } from 'react-icons/io5';
+import { useContext } from 'react';
+import { IoHome, IoPerson, IoStar, IoAddCircle } from 'react-icons/io5';
+import { UserContext } from '../../contexts/UserContext';
 import { MenuItem } from './MenuItem';
 import { MenuWrapper } from './styles';
 
-const MenuItems =[
+const MenuCustomerItems =[
     {
         icon: IoHome,
         label: 'Inicio',
@@ -18,13 +20,40 @@ const MenuItems =[
         label: 'Perfil',
         path: '/account'
     },
-]
+];
 
-export const Menu = () =>(
-    <MenuWrapper>
-        {
-            MenuItems.map( item => <MenuItem {...item} />)
-        }
-        
-    </MenuWrapper>
-)
+const MenuAdminItems =[
+    {
+        icon: IoHome,
+        label: 'Inicio',
+        path: '/'
+    },
+    {
+        icon: IoAddCircle,
+        label: 'Agregar',
+        path: '/add-property'
+    },
+    {
+        icon: IoPerson,
+        label: 'Perfil',
+        path: '/account'
+    },
+];
+
+export const Menu = () =>{
+
+    const {user} = useContext(UserContext);
+
+
+    return(
+        <MenuWrapper>
+            {
+                user.role === 1 && MenuCustomerItems.map( item => <MenuItem {...item} />)
+            }
+            {
+                user.role === 2 && MenuAdminItems.map( item => <MenuItem {...item} />)
+            }
+        </MenuWrapper>
+    )
+}
+    

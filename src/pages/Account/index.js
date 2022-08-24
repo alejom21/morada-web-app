@@ -1,16 +1,19 @@
+import { useContext } from 'react';
 import { Button } from '../../components/Button';
 import {Page} from '../../components/Page'
+import { UserContext } from '../../contexts/UserContext';
 import { PageTitle, FooterFixed } from '../../globalStyles';
 
 export const Account = () =>{
 
-    const isAuth = false;
+    const { user, setUser } = useContext(UserContext);
+    //const isAuth = false;
     
     const UserInfo = () =>(
         <div>
-            <h3>Alejandro</h3>
-            <h5>1001005085</h5>
-            <p>mejiatabares.a@gmail.com</p>
+            <h3>{user.name}</h3>
+            <h5>{user.phone}</h5>
+            <p>{user.email}</p>
             <hr />
             <FooterFixed>
                 <Button label="Cerrar sesion" onPress={ () => {alert('cerrar sesion')}}/>
@@ -31,7 +34,7 @@ export const Account = () =>{
         <Page>
             <PageTitle> Mi cuenta</PageTitle>
             {
-                isAuth ? <UserInfo /> : <UserUnauthorized />
+                user.isAuthenticated ? <UserInfo /> : <UserUnauthorized />
             }
         </Page>
     )
