@@ -4,4 +4,4 @@ export const NotFound =({picture}) => (
         <img src={picture} width="85%" height="85%" border-radius="20%"/>
             
     </NotFoundWrapper>
-)
+) 

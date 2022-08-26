@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import { Home } from './pages/Home';
-import { Property } from './pages/Property';
+//import { Property } from './pages/Property';
 import { NotFound } from './pages/NotFound';
 import { Account } from './pages/Account';
 import { Favorites } from './pages/Favorites';
@@ -14,10 +14,13 @@ import { Login } from './pages/Login';
 import { Singup } from './pages/Singup';
 import { Register } from './pages/Register';
 import { Addproperty } from './pages/Addproperty';
+import { POCUploadImage } from "./pages/POCUploadImage"
+
 import { useContext, useEffect } from 'react';
 import { getToken, removeToken } from './utils/TokenLS';
 import { UserContext } from './contexts/UserContext';
 import { requestHttp, HTTP_VERBS } from './utils/HttpRequest';
+import { Property } from './pages/Property';
 
 export const Navigation = () =>{
 
@@ -58,17 +61,19 @@ export const Navigation = () =>{
             removeToken();
         }
     }
-
+/* <Route path='/Property/:idProperty' element={<Property/>} /> 
+            */
     return(
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/Property/:idProperty' element={<Property/>} /> 
             <Route path='/Account' element={<Account/>} /> 
-            <Route path='/Favorites' element={<Favorites/>} /> 
+            <Route path='/Favorites/:id' element={<Favorites/>} /> 
             <Route path='/Login' element={<Login/>} /> 
             <Route path='/Singup' element={<Singup/>} /> 
             <Route path='/Register' element={<Register/>} /> 
-            <Route path='/Addproperty' element={<Addproperty/>} />             
+            <Route path='/Addproperty' element={<Addproperty />} />
+            <Route path="/pocuploadimage" element={<POCUploadImage />} />
+            <Route path='/Property/:idProperty' element={<Property />} />
             <Route path='*' element={<NotFound picture={require("./pages/NotFound/imagen/error-4040-768x469.webp")}/>} /> 
         </Routes>
     );

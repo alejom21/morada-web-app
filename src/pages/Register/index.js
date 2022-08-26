@@ -122,7 +122,8 @@ export const Register = () =>{
                 </FormControl>
             { isValid ? "valid": "no valid"}
             <Button disabled={!isValid} type="submit" onPress={ () => {} }  label="Registrarme" linkto="/" />
-            </form>        
+            </form>   
+                 
         </Page>
 
     )

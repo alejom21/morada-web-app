@@ -13,7 +13,7 @@ const MenuCustomerItems =[
     {
         icon: IoStar,
         label: 'Favoritos',
-        path: '/favorites'
+        path: '/Favorites/:idUser'
     },
     {
         icon: IoPerson,
@@ -31,7 +31,7 @@ const MenuAdminItems =[
     {
         icon: IoAddCircle,
         label: 'Agregar',
-        path: '/add-property'
+        path: '/addproperty'
     },
     {
         icon: IoPerson,

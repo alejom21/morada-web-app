@@ -27,7 +27,7 @@ export const PropertyCard = (props) =>(
 
 )
 
-export const PropertyCardDetail = ({ title, city, zone, businessType, shortDescription, description}) =>(
+/*export const PropertyCardDetail = ({ title, city, zone, businessType, shortDescription, description}) =>(
     <PropertyCardWrapper >
         
         <PropertyInfoWrapper>
@@ -44,7 +44,7 @@ export const PropertyCardDetail = ({ title, city, zone, businessType, shortDescr
         </PropertyInfoWrapper> 
     </PropertyCardWrapper>
 
-)
+)*/
 
 /*export const PropertyCardDetail = (property) =>(
     <PropertyCardWrapper >

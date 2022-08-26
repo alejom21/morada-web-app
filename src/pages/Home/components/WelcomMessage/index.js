@@ -32,9 +32,9 @@ export const WelcomeMesaage = () => {
     <WelcomeMesaageWrapper>
     
         <h3>Find</h3>
-        <div class="flex">
-            <p>best place <strong class="palbraResaltada">nearby</strong></p> 
-            <div class="h">
+        <div className="flex">
+            <p>best place <strong className="palbraResaltada">nearby</strong></p> 
+            <div className="h">
                 
                 <FaHandPeace />
             </div>

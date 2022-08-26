@@ -53,6 +53,7 @@ export const Home = () => {
                 params: makePropertiesFilter()
             });
             setProperties(response.data.properties);
+            console.log(response)
         } catch (error) {
             // TODO
         }
